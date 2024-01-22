@@ -171,6 +171,7 @@ export async function fetchInvoiceById(id: string) {  noStore();
       // Convert amount from cents to dollars
       amount: invoice.amount / 100,
     }));
+    console.log(invoice); // Invoice is an empty array []
 
     return invoice[0];
   } catch (error) {
@@ -241,3 +242,4 @@ export async function getUser(email: string) {
     throw new Error('Failed to fetch user.');
   }
 }
+
